@@ -1,0 +1,110 @@
+
+/*  stop watch	 */
+ #div1 {
+      width: 600px;
+      height: 400px;
+      margin: 100px auto;
+      text-align: center;
+   
+    }
+     
+    #count {
+      width: 200px;
+      height: 150px;
+      line-height: 150px;
+      margin: auto;
+      font-size: 40px
+      
+    }
+     .div1-inline{ display:inline} 
+    #div1 input {
+      width: 100px;
+      height: 100px;
+      border: 2px solid grey;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      font-size: 24px;
+      background: gray;
+      border-radius: 50%;
+    }
+        
+/*    nav */
+    #nav {
+     text-align: right;
+      
+	}
+
+body {margin:0;
+      background-color: #FF8B9E;}
+
+ul  {
+   
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style:none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 7px 7px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #FF8B9E;
+}
+/*nav position  */
+*{
+	margin:0;
+	padding:0;
+	}
+.t1{
+	position:fixed;
+	top:0;
+	width:375px;
+	height:100px;
+	background:#FF8B9E;
+	}
+.t01{
+	height:100px;
+	position:relative;
+	}
+
+/* music */
+
+.album{
+  color: black;
+  left: 80px;
+  top: 80px;
+}
+.album  div {
+  position: fixed;
+  padding: auto;
+  text-align: center;
+  align-items:center;
+  width: 50%;
+  height: 75%;
+  margin:30px;
+}
+.album .thumbnail {
+  left: 0;
+  
+}
+.album .lyrics {
+  padding: 100;
+  right: 0;
+}
+
+
+
+
+
+
