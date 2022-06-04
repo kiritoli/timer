@@ -1,0 +1,111 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="schedule.css">
+
+<head>
+    
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+</head>
+
+<body>
+   <div class=t1></div>
+<div class=t01></div>
+<div class=t2>
+<div class="calendar">
+        <hr class="divider">
+        <div class="calendar__col calendar__col--right">
+            <div class="content">
+                <h2 class="year">Friday<br><span class="calendar__heading-highlight">October 12th</span></h2>
+                <div class="clearfix"></div>
+                <ul class="weekday">
+                    <li><a href="#" title="Mon" data-value="1">Mon</a></li>
+                    <li><a href="#" title="Tue" data-value="2">Tue</a></li>
+                    <li><a href="#" title="Wed" data-value="3">Wed</a></li>
+                    <li><a href="#" title="Thu" data-value="4">Thu</a></li>
+                    <li><a href="#" title="Fri" data-value="5">Fri</a></li>
+                    <li><a href="#" title="Say" data-value="6">Sat</a></li>
+                    <li><a href="#" title="Sun" data-value="7">Sun</a></li>
+                </ul>
+<!--               Calculate the date -->
+                <div class="clearfix"></div>
+                <ul class="days">
+                    <script>
+                        for (var _i = 1; _i <= 31; _i += 1) {
+                            var _addClass = '';
+                            if (_i === 12) { _addClass = ' class="selected"'; }
+
+                            switch (_i) {
+                                case 4:
+                                case 9:
+                                case 17:
+                              
+                                    _addClass = ' class="event"';
+                                    break;
+                            }
+
+                            document.write('<li> <a href="#" title="' + _i + '" data-value="' + _i + '"' + _addClass + '>' + _i + '</a></li>');
+                        }
+                    </script>
+                    <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="calendar__col calendar__col--left">
+            <div class="content" id="app">
+                <div class="notes">
+                    <h3 class="notes__heading">Todo</h3>
+                    <p>
+<!--                       add work -->
+                        <input type="text" value="" placeholder="Add note" v-model="newTask" @keydown.enter="addTask" />
+                        <a href="#" @click.stop.prevent="addTask" title="Add note" class="addNote animate">+</a>
+                    </p>
+                    <ol class='list-group mt-3 noteList'>
+                        <li v-for="todo in todoList" class="list-group-item justify-content-between">
+<!--                           current work -->
+                            {{ todo.text }}
+                            <span class="btn btn-sm btn-danger float-right" @click="removeTask(todo)">
+                                <a href="#" title="Remove note" class="removeNote animate">x</a>
+                            </span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+       
+
+
+    </div>
+</div>
+  
+
+
+      <script type="text/javascript" src="schedule.js"></script>
+   
+</body>
+
+
+</html>
+
+                      <link rel="stylesheet" type="text/css" href="style.css">
+
+               <!-- Nav -->
+							<nav id="nav">
+                
+								<ul>
+                  <script src="https://kit.fontawesome.com/adaec59bba.js" crossorigin="anonymous"></script>
+                  
+                  
+									<li><a class="fa-solid fa-house" href="index.html"><span>Home</span></a></li>
+									
+									<li><a class="fa-solid fa-calendar-days" href="schedule.html"><span>Schedule</span></a></li>
+
+									<li><a class="fa-solid fa-music" href="music.html"><span>Music</span></a></li>
+                 
+									
+								</ul>
+							</nav>
+
+
+
+
