@@ -136,7 +136,6 @@
   <div class=t2>
 
     <div class="kanban-board">
-<!--       draggable blocks, built-in 2 example tasks -->
       <div class="kanban-block" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
         <strong>Unfinish</strong>
         <div class="task-button-block">
@@ -151,7 +150,6 @@
 
       </div>
       <div class="kanban-block" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
-<!--         Empty boxes for dragging -->
         <strong>In Progress</strong>
       </div>
       <div class="kanban-block" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -165,6 +163,7 @@
         </span>
 
         <span class="form-row-buttons">
+
           <button id="save-button" onclick="saveTask()">Save</span>
         <button id="cancel-button" onclick="createTask()">Cancel</span>
           </span>

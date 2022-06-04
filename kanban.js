@@ -1,4 +1,4 @@
-/** DRAG AND DROP FUNCTIONS **/
+// drag and drop functions for kanban
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
