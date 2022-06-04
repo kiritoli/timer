@@ -1,0 +1,128 @@
+
+<body>
+  <div class=t1></div>
+<div class=t01></div>
+<div class=t2>
+<div class="wrapper">
+    <p class="time-name clear">
+        <span class="break">Break</span>
+        <span class="session">Work</span>
+    </p>
+    <p class="plan-time clear">
+        <span class="break">
+<!--           add break time -->
+                <span class="break-minus">-</span>
+        <span class="break-num"></span>
+        <span class="break-add">+</span>
+        </span>
+        <span class="session">
+<!--           add working time -->
+                <span class="session-minus">-</span>
+        <span class="session-num"></span>
+        <span class="session-add">+</span>
+        </span>
+    </p>
+<!--   show the time -->
+    <div class="circle">
+        <p class="name"></p>
+        <p class="time"></p>
+        <div class="bg">
+            <p class="bg-inner"></p>
+        </div>
+
+    </div>
+</div>
+</div>
+  
+ 
+
+<style>
+  body,p {
+	margin:0;
+}
+/*   word color */
+body {
+  color:#fff;
+}
+/*   position */
+.clear:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+.wrapper {
+	width:600px;
+	margin:0 auto;
+}
+h1 {
+	text-align:center;
+	font-size:60px;
+}
+.break,.session {
+	width:200px;
+	text-align:center;
+	font-size:26px;
+	font-weight:200;
+}
+/*   change time position */
+.break {
+	float:right;
+}
+.session {
+	float:left;
+}
+.break span,.session span {
+	padding:0 10px;
+}
+/*   mouse change */
+.break-minus,.break-add,.session-minus,.session-add {
+	cursor:pointer;
+}
+/*   pomodoro time circle */
+.circle {
+	position:relative;
+	width:300px;
+	height:300px;
+	border-radius:50%;
+	border:3px solid white;
+	margin:100px auto;
+	text-align:center;
+}
+/*   words in circle */
+.name,.time {
+	position:relative;
+	font-size:34px;
+	margin:65px 0;
+	z-index:100;
+}
+</style>
+ 
+ <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="pomodoro.js"></script>
+  
+</body>
+
+  
+
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+  
+	
+
+					
+						<!-- Nav -->
+							<nav id="nav">
+                
+								<ul>
+                  <script src="https://kit.fontawesome.com/adaec59bba.js" crossorigin="anonymous"></script>
+                  
+                  
+									<li><a class="fa-solid fa-house" href="index.html"><span>Home</span></a></li>
+									
+									<li><a class="fa-solid fa-calendar-days" href="schedule.html"><span>Schedule</span></a></li>
+
+									<li><a class="fa-solid fa-music" href="music.html"><span>Music</span></a></li>
+                 
+									
+								</ul>
+							</nav>

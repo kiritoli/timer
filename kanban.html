@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Kanban Board</title>
+</head>
+<style>
+  .container {
+    width: 70%;
+    min-width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kanban-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+  .kanban-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: sans-serif;
+  }
+
+
+
+  .kanban-block,
+  .create-new-task-block {
+    padding: 0.6rem;
+    width: 30.5%;
+    min-width: 14rem;
+    min-height: 4.5rem;
+    border-radius: 0.3rem;
+  }
+
+  #todo {
+    background-color: #FCCDD3;
+  }
+
+  #inprogress {
+    background-color: #FCCDD3;
+    /* display: none; */
+  }
+
+  #done {
+    background-color: #FCCDD3;
+    /* display: none; */
+  }
+
+  .task {
+    background-color: #FCCDD3;
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    border: 0.1rem solid white;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.2rem 0.5rem 2rem;
+  }
+
+  #task-button {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    background-color: #FCCDD3;
+    border-radius: 0.2rem;
+    width: 100%;
+    border: 0.25rem solid white;
+    padding: 0.5rem 2.7rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .create-new-task-block {
+    display: none;
+    /* display: flex; */
+    background: #FCCDD3;
+    width: 64.4%;
+    flex-direction: column;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0.2rem;
+  }
+
+  .form-row-label {
+    width: 15%;
+    padding: 0.2rem;
+    padding-right: 0.5rem;
+    border: 0.1rem solid white;
+    border-right: 0;
+    border-radius: 0.2rem 0rem 0rem 0.2rem;
+  }
+
+  .form-row-input {
+    border: 0.1rem solid white;
+    border-radius: 0rem 0.2rem 0.2rem 0rem;
+    width: 85%;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .form-row-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.2rem;
+  }
+
+  #edit-button,
+  #save-button,
+  #cancel-button {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    background-color: white;
+    border-radius: 0.2rem;
+    width: 49.2%;
+    border: 0.25rem solid white;
+    padding: 0.5rem 2.7rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+  }
+
+  #edit-button {
+    display: none;
+  }
+</style>
+
+<body>
+  <div class=t1></div>
+  <div class=t01></div>
+  <div class=t2>
+
+    <div class="kanban-board">
+<!--       draggable blocks, built-in 2 example tasks -->
+      <div class="kanban-block" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <strong>Unfinish</strong>
+        <div class="task-button-block">
+          <button id="task-button" onclick="createTask()">Create new task</span>
+        </div>
+        <div class="task" id="task1" draggable="true" ondragstart="drag(event)">
+          <span>Task 1</span>
+        </div>
+        <div class="task" id="task2" draggable="true" ondragstart="drag(event)">
+          <span>Task 2</span>
+        </div>
+
+      </div>
+      <div class="kanban-block" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+<!--         Empty boxes for dragging -->
+        <strong>In Progress</strong>
+      </div>
+      <div class="kanban-block" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <strong>Finish</strong>
+      </div>
+      <div class="create-new-task-block" id="create-new-task-block">
+        <strong>Add</strong>
+        <span class="form-row">
+          <label class="form-row-label" for="task-name">Task</label>
+          <input class="form-row-input" type="text" name="task-name" id="task-name">
+        </span>
+
+        <span class="form-row-buttons">
+          <button id="save-button" onclick="saveTask()">Save</span>
+        <button id="cancel-button" onclick="createTask()">Cancel</span>
+          </span>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript" src="kanban.js"></script>
+</body>
+
+</html>
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+
+<!-- Nav -->
+<nav id="nav">
+
+  <ul>
+    <script src="https://kit.fontawesome.com/adaec59bba.js" crossorigin="anonymous"></script>
+
+
+    <li><a class="fa-solid fa-house" href="index.html"><span>Home</span></a></li>
+
+    <li><a class="fa-solid fa-calendar-days" href="schedule.html"><span>Schedule</span></a></li>
+
+    <li><a class="fa-solid fa-music" href="music.html"><span>Music</span></a></li>
+
+
+  </ul>
+</nav>
