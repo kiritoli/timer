@@ -1,0 +1,95 @@
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+  
+
+					
+						
+							<nav id="nav">
+                
+								<ul>
+                  <script src="https://kit.fontawesome.com/adaec59bba.js" crossorigin="anonymous"></script>
+                  
+                  
+									<li><a class="fa-solid fa-house" href="index.html"><span>Home</span></a></li>
+									
+									<li><a class="fa-solid fa-calendar-days" href="schedule.html"><span>Schedule</span></a></li>
+
+									<li><a class="fa-solid fa-music" href="music.html"><span>Music</span></a></li>
+                  	
+									
+								</ul>
+							</nav>
+
+			
+
+
+
+  
+</head>
+ 
+<body>
+
+  <div id="diva">
+    <div id="count">
+      <span id="id_A">00</span>
+      <span id="id_B">00</span>
+      <span id="id_C">00</span>
+    </div>
+    <input id="start" type="button" value="start">
+    <input id="stop" type="button" value="reset">
+  </div>
+  <script>
+    
+    function $(id) {
+      return document.getElementById(id)
+    }
+    window.onload = function() {
+      //click start to count
+      var count = 0
+      var timer = null 
+      var timer_start = false
+      $("start").onclick = function() {
+        //button can changed by start and stop
+        if (!timer_start) {
+          $("start").value = 'stop'
+          timer = setInterval(function() {
+            count++;
+            console.log(count)
+              // the value of time
+            console.log($("id_C"))
+            $("id_C").innerHTML = showNum(count % 60)
+            $("id_B").innerHTML = showNum(parseInt(count / 60) % 60)
+            $("id_A").innerHTML = showNum(parseInt(count / 60 / 60))
+          }, 1000)
+        }
+        else {
+          clearInterval(timer)
+          $("start").value = 'start'
+        }
+        timer_start = !timer_start
+      }
+     
+    
+      //   //stop to count
+      $("stop").onclick = function() {
+       
+       
+          clearInterval(timer)
+          //clear data
+        count = 0
+          //clear number
+        $("id_C").innerHTML = "00"
+        $("id_B").innerHTML = "00"
+        $("id_A").innerHTML = "00"
+      }
+ 
+      //write this into afunction
+      function showNum(num) {
+        if (num < 10) {
+          return '0' + num
+        }
+        return num
+      }
+    }
+  </script>
+</body>
